@@ -11,9 +11,9 @@
         android:id="@+id/gridLayout"
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/board"
         app:columnCount="3"
@@ -146,25 +146,31 @@
         android:id="@+id/playAgainText"
         android:layout_width="335dp"
         android:layout_height="35dp"
+        android:layout_marginStart="38dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="38dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="result"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="93dp"
         android:layout_height="52dp"
+        android:layout_marginStart="160dp"
         android:layout_marginEnd="159dp"
+        android:gravity="center"
         android:onClick="playAgain"
         android:text="Play Again"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playAgainText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

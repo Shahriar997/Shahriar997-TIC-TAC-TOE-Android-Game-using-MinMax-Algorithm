@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             currentState[tappedCounter] = player;
             arrayPrint(currentState);
 
-            counter.setTranslationY(-1100);
+            counter.setTranslationY(-1400);
             counter.setImageResource(R.drawable.cross);
             player = 0;
 
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
                     TextView txt = (TextView) findViewById(R.id.playAgainText);
                     txt.setText("It's a Draw");
+
                     txtButtonReposition(view,"Draw!");
                     gameActive = false;
                     break;
