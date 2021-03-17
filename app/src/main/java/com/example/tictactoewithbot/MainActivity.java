@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // bot's turn
+        cellDisable(view);
         bot.updateBoard(currentState);
         int botMove = bot.runTicTacToeBot();
         counter = getImageViewObject(botMove, view);
@@ -100,9 +101,10 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    finalCounter.animate().translationY(0).rotation(3600).setDuration(1000);
+                    finalCounter.animate().translationY(0).rotation(3600).setDuration(500);
+                    cellEnable(view);
                 }
-            }, 1000);
+            }, 500);
             //what if it ends up with a draw
 
 
@@ -134,6 +136,50 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+    }
+
+    public void cellEnable(View view){
+        ImageView img;
+        img = findViewById(R.id.imageView1);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView2);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView3);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView4);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView5);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView6);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView7);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView8);
+        img.setEnabled(true);
+        img = findViewById(R.id.imageView9);
+        img.setEnabled(true);
+    }
+
+    public void cellDisable(View view){
+        ImageView img;
+        img = findViewById(R.id.imageView1);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView2);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView3);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView4);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView5);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView6);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView7);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView8);
+        img.setEnabled(false);
+        img = findViewById(R.id.imageView9);
+        img.setEnabled(false);
     }
 
     public ImageView getImageViewObject(int botMove, View view){
